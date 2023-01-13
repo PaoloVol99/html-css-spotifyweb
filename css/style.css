@@ -29,7 +29,7 @@ a {
     --main-bg: #141923;
     --green: #9EE92F;
     --player-bg: #282828;
-    --grey-sidebar: #707070;
+    --grey-text: #707070;
 }
 
 /* DEBUG RULES */
@@ -65,7 +65,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
 }
 
 .sidebar {
@@ -84,23 +83,42 @@ a {
     height: 90px;
 }
 
+@media screen and (max-width: 552px) {
+
+    .sidebar {
+        flex-basis: 50px;
+    }
+}
+
 /* PLAYER */
+
+.song {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 230px;
+    padding: 0 10px;
+}
 
 .song-info {
     display: flex;
     align-items: center;
+    gap: 12px;
 }
 
 .media-player {
     display: flex;
     flex-direction: column;
-    flex-basis: 30%;
+    flex-basis: 35%;
     gap: 18px;
     align-items: center;
 }
 
 .player__options {
     display: flex;
+    flex-basis: 230px;
+    gap: 18px;
+    padding: 0 10px;
 }
 
 .song-info img {
@@ -109,16 +127,19 @@ a {
 
 .media__buttons {
     display: flex;
+    font-size: 20px;
+    gap: 22px;
+    align-items: center;
 }
 
 .song-name {
     display: block;
 }
 
-.song__text {
+/* .song__text {
     margin-left: 26px;
     margin-right: 42px;
-}
+} */
 
 .song__buttons {
     display: flex;
@@ -127,6 +148,9 @@ a {
 
 .volume {
     display: flex;
+    flex-basis: 150px;
+    gap: 14px;
+    align-items: center;
 }
 
 .player-bar {
@@ -134,6 +158,11 @@ a {
     align-items: center;
     gap: 5%;
     width: 100%;
+}
+
+.play-button {
+    font-size: 32px;
+    padding: 0 10px;
 }
 
 .progress-bar {
@@ -148,4 +177,22 @@ a {
     background-color: #C1C1C1;
     border-radius: 999em;
     width: 25%;
+}
+
+.volume-bar {
+    flex-basis: 118px;
+}
+
+.volume-empty {
+    width: 100%;
+    background-color: #5A5A5A;
+    border-radius: 999em;
+}
+
+.volume__fill {
+    display: block;
+    height: 5px;
+    background-color: #C1C1C1;
+    border-radius: 999em;
+    width: 42%;
 }
