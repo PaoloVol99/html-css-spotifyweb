@@ -105,6 +105,7 @@ a {
     top: 0;
     right: 0;
     width: 100%;
+    z-index: 999;
 }
 
 @media screen and (max-width: 552px) {
@@ -532,10 +533,10 @@ a {
 .album-wrapper h3{
     font-size: 18px;
     margin-bottom: 8px;
+    margin-top: 20px;
 }
 
 .album-wrapper img {
-    margin-bottom: 20px;
     display: block;
 }
 
@@ -548,6 +549,29 @@ a {
 
 .popular-artists img {
     border-radius: 50%;
+}
+
+.album-wrapper a {
+    position: relative;
+}
+
+.black-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popular-artists .black-bg {
+    border-radius: 50%;
+}
+
+.black-bg i {
+    font-size: 50px;
+    display: none;
 }
 
 @media screen and (max-width: 878px) {
@@ -601,4 +625,12 @@ a {
 
 .volume:hover .volume__fill {
     background-color: var(--green);
+}
+
+.album-wrapper a:hover .black-bg {
+    display: flex;
+}
+
+.album-wrapper a:hover i {
+    display: block;
 }
