@@ -187,6 +187,10 @@ a {
     color: var(--grey-text);
 }
 
+.song__buttons i {
+    display: block;
+}
+
 .player-bar {
     display: flex;
     align-items: center;
