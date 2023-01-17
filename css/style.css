@@ -312,6 +312,7 @@ a {
 .download-app img {
     width: 14px;
     filter: brightness(0.7);
+    display: block;
 }
 
 .profile img {
@@ -363,6 +364,7 @@ a {
 .nav-buttons a {
     display: flex;
     align-items: center;
+    position: relative;
     gap: 10px;
 }
 
@@ -378,8 +380,8 @@ a {
     height: 35px;
     width: 2px;
     background-color: var(--green);
-    margin-left: -20px;
-    margin-right: 8px;
+    position: absolute;
+    left: -20px;
 }
 
 .plus-icon {
@@ -420,6 +422,10 @@ a {
 
     .download-app::after {
         display: none;
+    }
+
+    .download-app {
+        display: contents;
     }
 
     .nav-buttons {
