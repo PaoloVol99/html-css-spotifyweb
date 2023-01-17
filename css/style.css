@@ -638,10 +638,10 @@ a {
     background-color: var(--green);
 }
 
-.album-wrapper a:hover .black-bg {
+.album-wrapper:hover .black-bg {
     display: flex;
 }
 
-.album-wrapper a:hover i {
+.album-wrapper:hover i {
     display: block;
 }
